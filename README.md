@@ -18,3 +18,23 @@ We will score each of these criteria on a scale of 1 to 4.
 ## Tech Stack - Rust & Nix
 
 We use Rust at Switch2 and don't expect you to know any Rust. We don't expect you to have Rust and its dependencies installed on your machine, so we are using Nix in this repo to manage the Rust dependencies (Rust, openssl, pkg-config). This Nix subshell will contain all you need to run the code and tests.
+
+### How to Build/Run
+
+#### Install Nix
+
+https://nixos.org/download/
+
+#### Run Nix Subshell
+
+```bash
+nix develop
+```
+
+#### Run Tests
+
+Once inside the subshell run:
+
+```bash
+cargo test
+```
