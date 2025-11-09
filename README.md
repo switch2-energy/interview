@@ -8,30 +8,34 @@ We have prepared a small library beginning a new billing system. The library has
 
 ## What we are looking for
 
-- Pairing: (1) solo hero → (4) collaborative, concise, kind.
-- TDD: (1) code then tests → (4) crisp red/green/refactor, naming sings.
-- Types: (1) strings/nums only → (4) illegal states unrepresentable.
-- Code: (1) tangled → (4) small, intention-revealing functions.
+- Pairing: How do you work and collaborate with others?
+- Type-Driven Development: How do you think about types and correctness?
+- TDD: How do you test code?
+- Code: How do you write code?
 
 We will score each of these criteria on a scale of 1 to 4.
 
 ## Tech Stack - Rust & Nix
 
-We use Rust at Switch2 and don't expect you to know any Rust. We don't expect you to have Rust and its dependencies installed on your machine, so we are using Nix in this repo to manage the Rust dependencies (Rust, openssl, pkg-config). This Nix subshell will contain all you need to run the code and tests.
+We use Rust at Switch2 and don't expect you to know any Rust or have Rust and its dependencies installed on your machine, so we are using Nix in this repo to manage the Rust dependencies (Rust, openssl, pkg-config). This Nix subshell will contain all you need to run the code and tests.
 
-### How to Build/Run
+### Help: I don't know Rust!
 
-#### Install Nix
+Since we don't expect you to know any Rust, you might wonder how you can progress through this exercise. The intention of the code here is not to write idiomatic Rust, but to write simple enough Rust that we feel anyone coming from different languages could understand and in the pair-programming setting will be able to ask the right questions to help not get stuck. If you join Switch2 you will be writing Rust so this is a good opportunity for you to see if you like it and us to see if you want to learn it and can pair productively with it.
+
+## How to Build/Run
+
+### Install Nix
 
 https://nixos.org/download/
 
-#### Run Nix Subshell
+### Run Nix Subshell
 
 ```bash
 nix develop
 ```
 
-#### Run Tests
+### Run Tests
 
 Once inside the subshell run:
 
