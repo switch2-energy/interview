@@ -1,0 +1,3 @@
+start_date,end_date,start_read_kwh,end_read_kwh,tariff_pence,standing_charge_pence
+2023-01-01,2023-01-10,100,110,7,50
+2023-01-11,2023-01-14,110,135,10,50

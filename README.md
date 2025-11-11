@@ -4,7 +4,7 @@ We want you to present the best version of yourself possible when interviewing w
 
 ## The Exercise
 
-We have prepared a small library beginning a new billing system. The library has some unit tests with it that are either failing or not finished. Your task is simply to pass the tests. You will work through the tests with another software engineer from Switch2.
+We have prepared a small library beginning a new billing system. The library has some unit tests with it that are failing. Your task is simply to pass the tests and refactor the code. You will work through the tests with another software engineer from Switch2.
 
 ## What we are looking for
 
