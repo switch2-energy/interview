@@ -12,7 +12,12 @@ struct ConsumptionLineItem {
     standing_charge_pence: String,
 }
 
-pub fn calculate_charges(filepath: String) -> i64 {
+/// Pretend this is the entry point to our application.
+pub fn main(filepath: String) -> i64 {
+    calculate_charges(filepath)
+}
+
+fn calculate_charges(filepath: String) -> i64 {
     let file = File::open(filepath).unwrap();
     let mut rdr = csv::Reader::from_reader(file);
 
@@ -45,19 +50,19 @@ mod tests {
 
     #[test]
     fn generate_bill_returns_aggregate_of_single_line_csv() {
-        let result = calculate_charges(String::from("data/single_line.csv"));
+        let result = main(String::from("data/single_line.csv"));
         assert_eq!(result, 570);
     }
 
     #[test]
     fn generate_bill_returns_aggregate_of_multiple_line_csv() {
-        let result = calculate_charges(String::from("data/multiple_line.csv"));
+        let result = main(String::from("data/multiple_line.csv"));
         assert_eq!(result, 1020);
     }
 
     // #[test]
     // fn generate_bill_handles_bad_data() {
-    //     let result = calculate_charges(String::from("data/bad_line.csv"));
+    //     let result = main(String::from("data/bad_line.csv"));
     //     assert_eq!(result, Err(ParseError(OutOfRange)));
     // }
 }
