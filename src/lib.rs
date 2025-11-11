@@ -21,23 +21,23 @@ fn calculate_charges(filepath: String) -> i64 {
     let file = File::open(filepath).unwrap();
     let mut rdr = csv::Reader::from_reader(file);
 
-    let mut line_items = Vec::new();
+    let mut csv_vector = Vec::new();
 
     for result in rdr.deserialize() {
         let record: ConsumptionLineItem = result.unwrap();
-        line_items.push(record);
+        csv_vector.push(record);
     }
 
     let mut total_charges = 0;
 
-    for item in line_items {
-        let start_date = NaiveDate::parse_from_str(&item.start_date, "%Y-%m-%d").unwrap();
-        let end_date = NaiveDate::parse_from_str(&item.end_date, "%Y-%m-%d").unwrap();
-        let consumption =
+    for item in csv_vector {
+        let sdate = NaiveDate::parse_from_str(&item.start_date, "%Y-%m-%d").unwrap();
+        let edate = NaiveDate::parse_from_str(&item.end_date, "%Y-%m-%d").unwrap();
+        let cons =
             item.end_read_kwh.parse::<i64>().unwrap() - item.start_read_kwh.parse::<i64>().unwrap();
-        let total_standing_charge = ((end_date - start_date).num_days())
-            * item.standing_charge_pence.parse::<i64>().unwrap();
-        let cost = consumption * item.tariff_pence.parse::<i64>().unwrap() + total_standing_charge;
+        let total_standing_charge =
+            ((edate - sdate).num_days()) * item.standing_charge_pence.parse::<i64>().unwrap();
+        let cost = cons * item.tariff_pence.parse::<i64>().unwrap() + total_standing_charge;
         total_charges += cost;
     }
 
