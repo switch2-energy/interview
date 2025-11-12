@@ -4,7 +4,7 @@ We want you to present the best version of yourself possible when interviewing w
 
 ## The Exercise
 
-We have prepared a small library beginning a new billing system. The library has some unit tests with it that are failing and the code is written intentionally to encourage refactoring. Your task is simply to pass the tests and refactor the code to your liking. You will work through the tests with another software engineer from Switch2. Treat them as a peer in a pair programming setting; they will be able to answer any Rust questions you have.
+We have prepared a very small library beginning a new billing system. The core of the package is a function which tries to work out how much a customer should be billed given an input csv containing fake meter consumption data. The Rust code has some unit tests with it that are failing and the code is written intentionally to encourage refactoring. Your task is simply to pass the tests and refactor the code to your liking. You will work through the tests with another software engineer from Switch2. Treat them as a peer in a pair programming setting; they will be able to answer any Rust questions you have.
 
 ## What we are looking for
 
