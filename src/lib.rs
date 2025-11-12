@@ -59,10 +59,4 @@ mod tests {
         let result = main(String::from("data/multiple_line.csv"));
         assert_eq!(result, 1020);
     }
-
-    // #[test]
-    // fn generate_bill_handles_bad_data() {
-    //     let result = main(String::from("data/bad_line.csv"));
-    //     assert_eq!(result, Err(ParseError(OutOfRange)));
-    // }
 }
