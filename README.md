@@ -12,7 +12,7 @@ The Rust code has some unit tests with it that are failing and the code is writt
 
 - Pairing: How do you work and collaborate with others?
 - Type-Driven Development: How do you think about types and correctness?
-- TDD: How do you test code?
+- Testing: How do you test code?
 - Code: How do you write code?
 
 We will score each of these criteria on a scale of 1 to 4.
