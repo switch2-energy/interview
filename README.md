@@ -31,6 +31,14 @@ https://nixos.org/download/
 
 ### Run Nix Subshell
 
+If it's the first time running nix, run: 
+
+```bash
+nix develop --extra-experimental-features nix-command --extra-experimental-features flakes
+```
+
+If you have already enabled experimental-features:
+
 ```bash
 nix develop
 ```
